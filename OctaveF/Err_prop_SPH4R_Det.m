@@ -7,7 +7,7 @@ addpath('./05MechF','06FunEx')
 %alpha3 = pi/2; alpha4 = pi/2; beta = 0; gm = 0;
 
 parvnum = [1.570814, 0.000018,0.270544,0.994839,0.401429,0.820339,0.925033, ...
-0.230678,0.474378]
+0.230678,0.474378];
 pvc = num2cell(parvnum,1);
 [eta1,phi1,psi,alpha1,alpha2,alpha3,alpha4,beta,gm]=pvc{:};
 

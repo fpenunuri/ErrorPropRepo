@@ -45,16 +45,15 @@ mr = 300; %To conduct the statistics, this is for illustrative purposes,
 bra_CouplerPointSPH4R = @(q,pars) transpose(CouplerPointSPH4R(q,pars));
 
 %Kinematic quantities as function of q and pars.
-pvaj = @(q,pars) KinQ03(bra_CouplerPointSPH4R,q3p,q2p,q1p,q,pars);
-%pvaj = @(q,pars) KinQ03(@CouplerPointSPH4R,q3p,q2p,q1p,q,pars);
+pvaj = @(q,pars) KinQ04(bra_CouplerPointSPH4R,q4p,q3p,q2p,q1p,q,pars);
 
 if exist('OCTAVE_VERSION', 'builtin')
     pkg load statistics; %<--- for Octave
 end
 
-DKQ03N = ErrPropMCNormal(pvaj,q0p,parv,dq0pv,dparv,mr,'vec');
-DKCN = num2cell(DKQ03N,2);
-[DFN,DVN,DAN,DJN] = DKCN{:};
+DKQ04N = ErrPropMCNormal(pvaj,q0p,parv,dq0pv,dparv,mr,'vec');
+DKCN = num2cell(DKQ04N,2);
+[DFN,DVN,DAN,DJN,DSN] = DKCN{:};
 
 ndcp = ceil(abs(log10(da))) + 1;
 
@@ -71,11 +70,14 @@ print_mat(DAN,ndcp)
 
 disp('error propagation on the jerk')
 print_mat(DJN,ndcp)
+
+disp('error propagation on the jounce/snap')
+print_mat(DSN,ndcp)
 disp('----------')
 
-DKQ03U = ErrPropMCUniform(pvaj,q0p,parv,dq0pv,dparv,mr,'vec');
-DKCU = num2cell(DKQ03U,2);
-[DFU,DVU,DAU,DJU] = DKCU{:};
+DKQ04U = ErrPropMCUniform(pvaj,q0p,parv,dq0pv,dparv,mr,'vec');
+DKCU = num2cell(DKQ04U,2);
+[DFU,DVU,DAU,DJU,DSU] = DKCU{:};
 
 disp('Error propagation using the MC method.')
 disp('Uniform distribution case.')
@@ -90,6 +92,9 @@ print_mat(DAU,ndcp)
 
 disp('error propagation on the jerk')
 print_mat(DJU,ndcp)
+
+disp('error propagation on the jounce/snap')
+print_mat(DSU,ndcp)
 disp('----------')
 
 
