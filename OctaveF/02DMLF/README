@@ -1,0 +1,14 @@
+
+Directional derivatives (derivative multilinear forms). Type 'help function_name' on a Matlab command window for some information.
+
+Functions:
+d1mlf
+d2mlf
+d3mlf
+d4mlf
+
+Although care has been taken on writing the Matlab code, 
+there is not guaranteed to be free of error. The use of the dual 
+classes it is entirely at the user's risk and the authors disclaim all 
+liability.
+
