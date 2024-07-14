@@ -1,11 +1,7 @@
 addpath('./01DualNumbersF','./02DMLF','./03AuxiliarDualFun','./04ErrorP')
 addpath('./05MechF','06FunEx')
 
-
 %EXAMPLE SPHERICAL 4R MECHANISM
-%eta1 = pi/2; phi1 = 0; psi = 0; alpha1 = pi/2; alpha2 = pi/6; 
-%alpha3 = pi/2; alpha4 = pi/2; beta = 0; gm = 0;
-
 %vector of parameters independent of time
 %parv = [eta1,phi1,psi,alpha1,alpha2,alpha3,alpha4,beta,gm];
 parv = [1.570814, 0.000018,0.270544,0.994839,0.401429,0.820339,0.925033, ...
@@ -15,13 +11,9 @@ parv = [1.570814, 0.000018,0.270544,0.994839,0.401429,0.820339,0.925033, ...
 da=5e-4; %this presicion (in meters) can be easy achieved when constructing
          %a mechanism
 
-%dth = 0; deta1 = 0; dphi1 = 0; dpsi = 0;
-%dalpha1 = da; dalpha2 = da; dalpha3 = da; dalpha4 = da;
-%dbeta = 0; dgm = 0;
 dth = 0; deta1 = da; dphi1 = da; dpsi = da;
 dalpha1 = da; dalpha2 = da; dalpha3 = da; dalpha4 = da;
 dbeta = da; dgm = da;
-
 
 %vectors of errors
 dq0pv = dth;
@@ -32,7 +24,6 @@ q1p = 1; %constant angular velocity; thus, q2p, q3p, q4p are zero
 q2p = 0; 
 q3p = 0;
 q4p = 0;
-
 
 %The functions ErrPropMCNormal and ErrPropMCUniform are not vectorized
 %For a large mr, the calculation may be slow (specially in Octave)
