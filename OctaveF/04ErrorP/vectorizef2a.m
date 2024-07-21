@@ -47,18 +47,8 @@ function mvals = faux(ff,r1,r2)
     indx=repmat({':'},1,rng);
     indx{1}=1;
     sx(1)=m;
-    
-    if(isa(aux1,'dual1'))
-        mvals=dual1(zeros(sx));
-    elseif(isa(aux1,'dual2'))
-        mvals=dual2(zeros(sx));
-    elseif(isa(aux1,'dual3'))
-        mvals=dual3(zeros(sx));
-    elseif(isa(aux1,'dual4'))
-        mvals=dual4(zeros(sx));
-    else
-        mvals=zeros(sx);
-    end
+
+    mvals = feval(class(aux1),zeros(sx));
     
     mvals(indx{:})=aux1;
     for k=2:m
