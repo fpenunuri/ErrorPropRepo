@@ -13,9 +13,9 @@ overloaded. Use product(size(A)) instead.
 Overloaded functions.
 abs, acos, acosh, asin, asinh, atan, atan2, atanh, cat, conj, cos, cosh,
 cross, ctranspose, dot, eq, erf, exp, ge, gt, horzcat, imag, inv, le,
-length, log, lt, minus, mldivide, mpower, mrdivide, mtimes, ne, permute,
-plus, power, prod, rdivide, real, reshape, sin, sinh, size, sqrt, subsasgn,
-subsref, sum, tan, tanh, times, transpose, uminus, uplus, vertcat
+length, log, lt, minus, mldivide, mpower, mrdivide, mtimes, ne, num2cell,
+permute, plus, power, prod, rdivide, real, reshape, sin, sinh, size, sqrt,
+subsasgn, subsref, sum, tan, tanh, times, transpose, uminus, uplus, vertcat
 
 Although care has been taken on writing the Matlab code, 
 there is not guaranteed to be free of error. The use of the dual 
