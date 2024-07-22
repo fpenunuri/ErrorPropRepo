@@ -38,9 +38,8 @@ absX, HTM, rot_mat, Scross, sp, vtangent, vuni
 e) folder "06FunEx":
 CouplerPoint4R, CouplerPointSPH4R, print_mat, rposD, rposDX, sph4r_vars
 
-
-Although care has been taken on writing the code, there is not guaranteed to 
-be free of error. The use of the dual classes it is entirely at the user's 
-risk and the author disclaims all liability.
+Although care has been taken in writing the code, there is no guarantee
+that it is free of errors. The use of the dual classes is entirely at
+the user's risk, and the author disclaims all liability.
 
 F. Peñuñuri
