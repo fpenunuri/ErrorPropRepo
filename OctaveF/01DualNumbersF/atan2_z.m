@@ -22,7 +22,7 @@ function fr = atan2_z(y,x)
     fr(log3) = A3(log3);
 end
 
-% $$$ although correct, this version present precision problems 
+% $$$ although correct, this version presents precision problems 
 % $$$   
 % $$$   function  f_res = atan2_z(zy,zx) 
 % $$$     ii=1i;

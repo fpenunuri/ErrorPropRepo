@@ -1,7 +1,7 @@
 %C = num2cell (A)
 %C = num2cell (A, DIM)
 %Convert the numeric matrix A to a cell array.
-%A can have dual2 numbers as elements.
+%A can have dual numbers as elements.
 
 function fr = num2cell(varargin)
 [args{1:nargin}] = varargin{:};
